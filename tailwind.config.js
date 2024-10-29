@@ -3,6 +3,9 @@
 module.exports = {
   content: ["./src/**/*.{html,js}", "./src/css/styles.css"],
   darkMode: 'class', // Add this line
+  daisyui: {
+    themes: ["light", "dark", "cupcake"],
+  },
   theme: {
     extend: {
       colors: {
