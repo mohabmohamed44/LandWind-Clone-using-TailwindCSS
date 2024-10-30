@@ -13,15 +13,15 @@ function toggleTheme() {
 }
 
 // Update your DOMContentLoaded listener
-document.addEventListener("DOMContentLoaded", () => {
-    const savedTheme = localStorage.getItem("theme") || "light";
-    const checkbox = document.querySelector(".toggle");
-    
-    if (savedTheme === "dark") {
-        document.documentElement.classList.add('dark');
-        checkbox.checked = true;
+$(document).ready(function(){
+    const savedTheme = localStorage.getItem("theme") || light;
+    const checkbox = $(".toggle");
+
+    if(savedTheme === "dark") {
+        $("html").addClass("dark");
+        checkbox.prop("checked", true);
     } else {
-        document.documentElement.classList.remove('dark');
-        checkbox.checked = false;
+        $("html").removeClass("dark");
+        checkbox.prop("checked", false);
     }
 });
