@@ -28,10 +28,11 @@ $(document).ready(function(){
 
 // add a function to open navbar on mobile
 function openNavbar() {
-    const navbar = $(".navbar");
-    if (navbar.is(":hidden")) {
-        navbar.slideDown();
+    const menuIcon = $(".menu-icon");
+    const navLinks = $(".nav-links"); 
+    if (menuIcon.hasClass("fa-bars")) {
+        menuIcon.removeClass("fa-bars").addClass("fa-xmark")
     } else {
-        navbar.slideUp();
+        menuIcon.remveClass("fa-xmark").addClass("fa-bars");
     }
 }
