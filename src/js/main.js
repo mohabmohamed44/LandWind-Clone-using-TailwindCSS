@@ -32,7 +32,9 @@ function openNavbar() {
     const navLinks = $(".nav-links"); 
     if (menuIcon.hasClass("fa-bars")) {
         menuIcon.removeClass("fa-bars").addClass("fa-xmark")
+        navLinks.show();
     } else {
-        menuIcon.remveClass("fa-xmark").addClass("fa-bars");
+        menuIcon.removeClass("fa-xmark").addClass("fa-bars")
+        navLinks.hide();
     }
 }
