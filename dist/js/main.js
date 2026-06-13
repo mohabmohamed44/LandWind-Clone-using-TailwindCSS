@@ -25,3 +25,13 @@ $(document).ready(function(){
         checkbox.prop("checked", false);
     }
 });
+
+// add a function to open navbar on mobile
+function openNavbar() {
+    const navbar = $(".navbar");
+    if (navbar.is(":hidden")) {
+        navbar.slideDown();
+    } else {
+        navbar.slideUp();
+    }
+}

@@ -25,3 +25,14 @@ $(document).ready(function(){
         checkbox.prop("checked", false);
     }
 });
+
+// add a function to open navbar on mobile
+function openNavbar() {
+    const menuIcon = $(".menu-icon");
+    const navLinks = $(".nav-links"); 
+    if (menuIcon.hasClass("fa-bars")) {
+        menuIcon.removeClass("fa-bars").addClass("fa-xmark")
+    } else {
+        menuIcon.remveClass("fa-xmark").addClass("fa-bars");
+    }
+}
