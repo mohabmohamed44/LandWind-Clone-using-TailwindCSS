@@ -14,7 +14,7 @@ function toggleTheme() {
 
 // Update your DOMContentLoaded listener
 $(document).ready(function(){
-    const savedTheme = localStorage.getItem("theme") || light;
+    const savedTheme = localStorage.getItem("theme") || "light";
     const checkbox = $(".toggle");
 
     if(savedTheme === "dark") {

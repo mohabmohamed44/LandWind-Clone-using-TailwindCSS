@@ -99,7 +99,9 @@
     "tailwindcss": "^3.4.14"
   },
   "scripts": {
-    "build-css": "npx tailwindcss -i ./src/css/styles.css -o ./dist/css/styles.css --watch"
+    "build-css:dev": "npx tailwindcss -i ./src/css/styles.css -o ./dist/css/styles.css --watch",
+    "build-css:prod": "npx tailwindcss -i ./src/css/styles.css -o ./dist/css/styles.css --minify",
+    "build": "npm run build-css:prod && bash build.sh"
   },
   "keywords": [],
   "author": "",
