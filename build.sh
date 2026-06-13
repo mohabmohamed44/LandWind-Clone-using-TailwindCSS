@@ -1,21 +1,22 @@
-# !/bin/bash
-# Copy index.html to dist (with correct path)
+#!/bin/bash
+
+# Create directories first
+mkdir -p dist/css dist/js dist/img dist/webfonts
+
+# Copy index.html to dist
 cp src/index.html dist/index.html
 
-# copy Js 
+# Copy JS
 cp src/js/*.js dist/js/
 
-# copy images
+# Copy images
 cp src/img/* dist/img/
 
-# copy fontawesome css
+# Copy FontAwesome CSS
 cp src/css/all.min.css dist/css/all.min.css
 
-# copy styles.css
-cp src/css/styles.css dist/css/styles.css
+# Copy FontAwesome webfonts
+cp src/webfonts/* dist/webfonts/
 
-# copy jQuery.min.js
-cp src/js/jQuery.min.js dist/js/jQuery.min.js
-
-# copy main.js
-cp src/js/main.js dist/js/main.js
+# Note: styles.css is already built by tailwindcss into dist/css/styles.css
+# Note: src/css/styles.css (the input) is just @tailwind directives, no need to copy it
